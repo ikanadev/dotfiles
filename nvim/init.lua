@@ -10,6 +10,7 @@ vim.o.relativenumber = true
 vim.o.scrolloff = 4
 vim.o.visualbell = true
 vim.o.encoding = 'utf-8'
+vim.o.colorcolumn = "100"
 -- COMMEND 1st FOR TABS
 -- vim.o.expandtab = false
 vim.o.expandtab = true

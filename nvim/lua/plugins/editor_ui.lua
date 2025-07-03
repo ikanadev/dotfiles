@@ -10,7 +10,7 @@ return {
       vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', opts)
       require("nvim-tree").setup({
         view = {
-          width = 50,
+          width = 60,
           side = "right",
         },
       })

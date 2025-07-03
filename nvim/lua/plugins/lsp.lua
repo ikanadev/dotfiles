@@ -4,7 +4,8 @@ return {
     config = function(_, opts)
       lsp = require("lspconfig")
       lsp.dartls.setup{}
-      lsp.biome.setup{}
+      -- lsp.biome.setup{}
+      -- lsp.oxlint.setup{}
       lsp.gopls.setup{}
       lsp.ts_ls.setup{}
       lsp.svelte.setup{}
@@ -25,6 +26,7 @@ return {
 			lsp.html.setup{}
 			lsp.unocss.setup{}
 			lsp.eslint.setup{}
+      lsp.graphql.setup{}
     end,
   },
 }
