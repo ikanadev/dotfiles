@@ -1,0 +1,10 @@
+vim.lsp.enable('gopls');
+vim.lsp.enable('golangci_lint_ls');
+vim.lsp.enable('buf_ls');
+vim.lsp.enable('html');
+-- vim.lsp.enable('eslint');
+vim.lsp.enable('postgres_lsp');
+vim.lsp.enable('tailwindcss');
+vim.lsp.enable('ts_ls');
+vim.lsp.enable('biome');
+vim.lsp.enable('kotlin_lsp');

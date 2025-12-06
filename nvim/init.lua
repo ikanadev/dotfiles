@@ -48,27 +48,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 --  Load plugins
-require("lazy").setup("plugins")
-
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {
-  pattern = {"*.v"},
-  callback = function(ev)
-    vim.cmd([[set filetype=v]])
-  end,
-})
-
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(args)
-    local opts = { buffer = args.buf }
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, opts)
-    vim.keymap.set("n", "<leader>ef", vim.lsp.buf.format, opts)
-    vim.keymap.set("n", "<leader>ed", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "<leader>ea", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>eR", vim.lsp.buf.rename, opts)
-    vim.keymap.set("n", "<leader>er", vim.lsp.buf.references, opts)
-    vim.keymap.set("n", "<leader>ei", vim.lsp.buf.implementation, opts)
-  end,
+require("lazy").setup("plugins", {
+  change_detection = { notify = false },
 })
 
 -- Statusline

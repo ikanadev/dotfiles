@@ -30,11 +30,8 @@ return {
       set_keymap('n', 'fb', '<cmd>FzfLua buffers<CR>', opt)
       set_keymap('n', 'fg', '<cmd>FzfLua git_status<CR>', opt)
       set_keymap('n', 'fr', '<cmd>FzfLua resume<CR>', opt)
-      -- LSP
-      set_keymap('n', 'gd', '<cmd>FzfLua lsp_definitions<CR>', opt)
-      set_keymap('n', 'gr', '<cmd>FzfLua lsp_references<CR>', opt)
-      set_keymap('n', 'gt', '<cmd>FzfLua lsp_typedefs<CR>', opt)
-      set_keymap('n', 'gi', '<cmd>FzfLua lsp_implementations<CR>', opt)
+      set_keymap('n', 'grr', '<cmd>FzfLua lsp_references<CR>', opt)
+      set_keymap('n', 'gre', '<cmd>FzfLua diagnostics_document<CR>', opt)
       require("fzf-lua").setup(opts)
     end,
   },
