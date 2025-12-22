@@ -16,7 +16,7 @@ return {
             anthropic = function()
               return require("codecompanion.adapters").extend("anthropic", {
                 env = {
-                  api_key = "KEY",
+                  api_key = "API_KEY",
                 },
               })
             end
