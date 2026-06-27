@@ -16,10 +16,6 @@ M.Spacer = function()
   return table.concat { '%#Spacer# ' }
 end
 
-M.Codeium = function()
-	return table.concat { '%#Codeium#', vim.api.nvim_call_function('codeium#GetStatusString', {}) }
-end
- 
 M.FileInfo = function()
   local filename = (fn.expand '%' == '' and 'Empty ') or fn.expand '%:t'
  
@@ -96,7 +92,7 @@ end
 M.LSP_status = function()
   if rawget(vim, 'lsp') then
     local client_names = {}
-    for _, client in ipairs(vim.lsp.get_active_clients()) do
+    for _, client in ipairs(vim.lsp.get_clients({ bufnr = 0 })) do
       table.insert(client_names, client.name)
     end
  

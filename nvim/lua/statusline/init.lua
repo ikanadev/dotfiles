@@ -9,7 +9,6 @@ function Statusline()
     utils.Git(),
     utils.Spacer(),
     '%=',
-		utils.Codeium(),
     utils.FileInfo(),
     utils.Spacer(),
     utils.CursorPosition(),
